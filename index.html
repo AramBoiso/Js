@@ -8,15 +8,46 @@
 </head>
 <body>
         <!--
-                                   Video 4
-                    En este video pudimos ver el concepto de array
+                                   Video 5
+                            Metodos y Propiedades de un arreglo       
+                   
         -->
 
         
 
     <script>
+
+        // Te muestra el total de vaores que tienes en el arreglo aqui si cuenta desde 1
          var arreglo = ["valor 1", "valor 2", "valor 3"];
-         console.log(arreglo[1]);
+         console.log(arreglo.length); 
+
+
+         // Aqui estamos agregando un nuevo elemento al arreglo el cual se posisiona al final
+         arreglo[arreglo.length] = "valor 4"; 
+         console.log(arreglo.length);
+
+
+        // Esta es una forma de agregar elementos a un arreglo mas facil 
+        arreglo.push("valor 5", "valor 6"); 
+        console.log(arreglo.length);
+
+        //Elimina el ultimo elemento del arreglo
+        arreglo.pop();
+        console.log(arreglo.length);
+
+
+        // aqui estamos concatenando o uniendo los dos arreglos en uno
+        arreglo_2 = ["nuevo valor 1", "nuevo valor 2"];  
+        todos_los_arreglos = arreglo.concat(arreglo_2);
+        console.log(todos_los_arreglos.length);
+
+        // aqui separamos los elementos del arreglo
+          console.log(todos_los_arreglos.join(" - "));
+
+       // aqui ordenamos el arreglo alfabeticamente
+       var ordenados = todos_los_arreglos.sort();
+       console.log(ordenados);
+
     </script>
 </body>
 </html>
