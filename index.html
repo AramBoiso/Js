@@ -8,10 +8,10 @@
 </head>
 <body>
         <!--
-                                                             Video 15
+                                                                Video 16
+                                 En este video pude coocer como modificar, remplazar y eliminar elementos del DOM            
 
-                              En este video prendi a como insertar elementos nuevos a un elemento padre 
-                                y agregarlos antes de un elemento como despues.          
+                                  
                                             
         -->
 
@@ -20,26 +20,40 @@
             <li>Lorem ipsum dolor sit amet.</li>
         </ol>
 
+        <ol id="lista_2">
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+        </ol>
+
      
 
     <script>
        
-    
-     var elemento = document.createElement("li"),
-         contenido = document.createTextNode("Nuevo Texto"),
-         elemento_2 = document.createElement("li"),
-         contenido_2 = document.createTextNode("Nuevo Texto 2")
 
-         elemento.appendChild(contenido);
-         elemento_2.appendChild(contenido_2);
+            // Modificando los elementos
+      var li = document.getElementsByTagName("li");
 
-     var padre = document.getElementsByTagName("li")[0].parentNode,     // = var padre = document.getElementById("lista");
-         hijo = document.getElementsByTagName("li")[0];
-      
+      li[0].innerHTML = "<h1> HOLA MUNDO </h1>";
 
-        padre.appendChild(elemento_2);
-        padre.insertBefore(elemento, hijo);
+      li[1].textContent = "<h2> HOLA MUNDO </h2>"
 
+
+      // Remplazando los elementos del DOM
+
+      var elemento = document.createElement("li"),
+          contenido = document.createTextNode("Texto Remplazado");
+
+          elemento.appendChild(contenido);
+
+      var padre = document.getElementById("lista_2"),
+          li = document.getElementsByTagName("li");
+
+          padre.replaceChild(elemento, li[2]);
+          
+
+          // Eliminando un elemento del DOM
+
+          padre.removeChild(li[3]);
     
          
       
