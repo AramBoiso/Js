@@ -8,15 +8,10 @@
 </head>
 <body>
         <!--
-                                                      Video 11
-                          En este video pude ver el scope de javascript las variables globales y locales
-                          como  funcionan y como utilizarlas.
-
-
-
-                Global: Podemos acceder a ellas desde cualquier parte del codigo.
-                
-                Local: Variables creadas dentro de una funcion, solo pueden ser accedidas desde su funcion o una funcion anidada
+                                                         Video 12
+                                         En este video pude ver los metodos y propiedades
+                                         que se le puden aplicar a una cadena de texto             
+                  
                                       
 
                     
@@ -24,50 +19,19 @@
 
     <script>
 
-        //       Este es una funcion anonima o auto ejecutable
-
-        (function(){
-              console.log("Estoy dentro de una funcion anonima");
-        }())
+        /*
         
-
-         /* 
-             A continuacion tenemos dos casos que se pueden presentar con las variables locales
-             en estos ejemplos tenemos una funcion anidada la cual puede acceder a las variables o datos
-             que contenga su funcion padre pero la funcion padre no podra acceder a los valores de su
-             funcion hija. En resumen las funciones pueden tomar valores que esten fuera de ellas pero
-             nadie puede acceder a sus valores desde fuera de ellas
-         */
-
-        // Caso 1:
-    
-        var funcion_1 = function(){
-            var caso_1 = "Este es el caso donde la funcion hija pude acceder a esta variable en este caso la funcion hija es funcion_2";
-            var funcion_2 = function(){
-                  alert(caso_1);
-            }
-
-            funcion_2();
-        }
-
-        funcion_1();
-
-
-          // Caso 2:
-    
-          var funcion_1 = function(){
-              alert(caso_1);
-
-            var funcion_2 = function(){
-             var caso_1 = "Este es el caso donde la funcion padre no pude acceder a las variables o valores que contenga su funcion hija en este caso funcion_2";
-                 
-            }
-
-            //funcion_2();
-        }
-
-        funcion_1();
-
+        .length
+        .substring();
+        .substr();
+        indexOf("a");
+        indexOf("a",0);
+        lastIndexOf("a");
+        replace(varibale,"cambio");
+        toUpperCase();
+        toLowerCase();
+        
+        */
     </script>
 
 </body>
