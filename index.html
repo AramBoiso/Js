@@ -5,57 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JavaScript</title>
+
+    <style>
+
+      div{
+          width: 250px;
+          height: 350px;
+          border: 1px solid black;
+          display: inline-block;
+      }
+
+      .rojo{
+          background-color: red;
+      }
+
+      .azul{
+          background-color: blue;
+      }
+    
+    </style>
 </head>
+
 <body>
         <!--
-                                                                Video 16
-                                 En este video pude coocer como modificar, remplazar y eliminar elementos del DOM            
+                                                                Video 17
+                                 En este video aprendi a como agregar atributos a los elementos del DOM       
 
                                   
                                             
         -->
-
-        <ol id="lista">
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet.</li>
-        </ol>
-
-        <ol id="lista_2">
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet.</li>
-        </ol>
-
+    <section id ="contenedor">
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <a href="https:google.com.mx" id="enlace">GOOGLE</a>
+    </section>
+        
      
 
     <script>
+
+   var elemento = document.createElement("div"),
+       div = document.getElementsByTagName("div"),
+       padre = document.getElementById("contenedor");
+
+
+       elemento.setAttribute("class","rojo");
+
+       padre.insertBefore(elemento, div[0]);
+
+       div[1].id = "tengo un nuevo id";
+
+       div[2].className = "azul";
+
+
+      var enlace = document.getElementById("enlace");
+
+      console.log(enlace.href);
+
        
 
-            // Modificando los elementos
-      var li = document.getElementsByTagName("li");
+       
 
-      li[0].innerHTML = "<h1> HOLA MUNDO </h1>";
-
-      li[1].textContent = "<h2> HOLA MUNDO </h2>"
-
-
-      // Remplazando los elementos del DOM
-
-      var elemento = document.createElement("li"),
-          contenido = document.createTextNode("Texto Remplazado");
-
-          elemento.appendChild(contenido);
-
-      var padre = document.getElementById("lista_2"),
-          li = document.getElementsByTagName("li");
-
-          padre.replaceChild(elemento, li[2]);
-          
-
-          // Eliminando un elemento del DOM
-
-          padre.removeChild(li[3]);
-    
-         
       
     </script>
 
