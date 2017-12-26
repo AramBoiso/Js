@@ -8,31 +8,67 @@
 </head>
 <body>
         <!--
-                                                     Video 10
-                                      En este video hize un ejercicio el cuel consiste en sumar dos numeros 
-                                      utilizando el formulario y usando funciones
+                                                      Video 11
+                          En este video pude ver el scope de javascript las variables globales y locales
+                          como  funcionan y como utilizarlas.
+
+
+
+                Global: Podemos acceder a ellas desde cualquier parte del codigo.
+                
+                Local: Variables creadas dentro de una funcion, solo pueden ser accedidas desde su funcion o una funcion anidada
+                                      
 
                     
         -->
 
-        <form action="">
-            <input type="text" placeholder="numero 1" id="n1">
-            <input type="text" placeholder="numero 2" id="n2">
-            <input type="submit" value="sumar" onclick="alert(suma());">
-        </form>
-
-       <div id="imprime"></div>
     <script>
 
-     var suma = function(){
-        var numero1 = parseFloat(document.getElementById("n1").value), 
-            numero2 = parseFloat(document.getElementById("n2").value),
-            resultado = numero1 + numero2;
+        //       Este es una funcion anonima o auto ejecutable
 
-          return resultado;
-     }
+        (function(){
+              console.log("Estoy dentro de una funcion anonima");
+        }())
+        
 
+         /* 
+             A continuacion tenemos dos casos que se pueden presentar con las variables locales
+             en estos ejemplos tenemos una funcion anidada la cual puede acceder a las variables o datos
+             que contenga su funcion padre pero la funcion padre no podra acceder a los valores de su
+             funcion hija. En resumen las funciones pueden tomar valores que esten fuera de ellas pero
+             nadie puede acceder a sus valores desde fuera de ellas
+         */
+
+        // Caso 1:
+    
+        var funcion_1 = function(){
+            var caso_1 = "Este es el caso donde la funcion hija pude acceder a esta variable en este caso la funcion hija es funcion_2";
+            var funcion_2 = function(){
+                  alert(caso_1);
+            }
+
+            funcion_2();
+        }
+
+        funcion_1();
+
+
+          // Caso 2:
+    
+          var funcion_1 = function(){
+              alert(caso_1);
+
+            var funcion_2 = function(){
+             var caso_1 = "Este es el caso donde la funcion padre no pude acceder a las variables o valores que contenga su funcion hija en este caso funcion_2";
+                 
+            }
+
+            //funcion_2();
+        }
+
+        funcion_1();
 
     </script>
+
 </body>
 </html>
