@@ -17,44 +17,48 @@
           width: 400px;
       }
 
-      .titulo{
-          border: 1px solid navy;
-          background-color: #ccc;
-          padding: 10px;
+      input[type="button"]{
+          display: block;
+          margin:5px;
       }
 
-      .tituloGrande{
-          font-size: 100px;
-      }
-    
     </style>
 </head>
 
 <body>
         <!--
-                                                                Video 18
-                                En este video aprendi a manipular los estilos css por medio de Javascript    
+                                                                Video 19
+                                En este video hize una practica con una imagen, esta hace un efecto zoom
+                                cuando les das clic al boton  
 
                                   
                                             
         -->
-    <h1 id="encabezado" class="titulo tituloGrande"> Soy un encabezado \* - */ </h1>
+      
+        <form action="">
+            <input type="button" value="zoom" onclick="clic()" >
+        </form>
+
+    <img src="https://lorempixel.com/400/400" alt="" id="img" class="thumb">
+    
         
      
 
     <script>
+      
+      function clic(){
+          
+          var imagen = document.getElementById("img");
 
-       var encabezado = document.getElementById("encabezado");
-     /*
-       encabezado.style.color = "red";
-       encabezado.style.backgroundColor = "navy";
-       encabezado.style.padding = "5px";
-       encabezado.style.textAlign = "center";
-    */
+       if(imagen.className == "thumb" ){
+           imagen.className = "thumb grande";
+       }
+       else{
+        imagen.className = "thumb";
+       }
 
-    encabezado.className = encabezado.className.replace("tituloGrande","");
-       
 
+      }
       
     </script>
 
