@@ -1,86 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JavaScript</title>
-
-  
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css"> 
+	<title>Lista de Tareas</title>
 </head>
-
 <body>
-        <!--
-                                                                Video 22
-                                En este video aprendi a validar un formulario de una manera
-                                basica.
 
-                                  
-                                            
-        -->
-      
-      <form action="" name="formulario" method="get">
-        <input type="text" name="nombre" id="nom" maxlength="30" placeholder="Nombe: ">
-        <br>
+	<div class="principal">
+		<div class="wrap">
+			<form class="formulario" action="">
+				<input type="text" id="tareaInput" placeholder="Agrega tu tarea">
+				<input type="button" class="boton" id="btn-agregar" value="Agregar Tarea">
+			</form>
+		</div>
+	</div>
+ 
+	<div class="tareas">
+		<div class="wrap">
+			<ul class="lista" id="lista">
+				<li><a href="#">1 Lorem ipsum dolor sit amet.</a></li>
+				<li><a href="#">2 Lorem ipsum dolor sit amet.</a></li>
+				<li><a href="#">3 Lorem ipsum dolor sit amet.</a></li>
+			</ul>
+		</div>
+    </div>
 
-        <input type="radio" name="sexo" id="hombre" value="Hombre"> Hombre
-        <input type="radio" name="sexo" id="mujer" value="Mujer"> Mujer
-        <br>
-
-        <input type="checkbox" name="terminos" id="term"> Terminos y Condiciones
-         <br>
-
-        <input type="submit" value="Enviar" id="btn" name="boton">
-      </form>
-     
-
-    <script>
-      
-    (function(){
-
-        var formulario = document.getElementsByName("formulario")[0],
-            elementos = formulario.elements,
-            boton = document.getElementById("btn");
-
-            var validarNombre = function(e){
-                if(formulario.nombre.value == 0){
-                    alert("Completa el Campo Nombre");
-                    e.preventDefault();
-                }
-
-            },
-
-            validarRadiosButtons = function(e){
-                if(formulario.sexo[0].checked == true || formulario.sexo[0].checked == true ){
-
-                }
-                else{   
-                     alert("Selecciona tu sexo");
-                     e.preventDefault();
-                }
-
-            },
-
-            validarCheckBox = function(e){
-                if(formulario.terminos.checked == false){
-                      alert("Por favor acepta los terminos y condiciones");
-                      e.preventDefault();
-                }
-                else{
-                               
-                }
-            }
-
-            var validar = function (e){
-               validarNombre(e);
-               validarRadiosButtons(e);
-               validarCheckBox(e);
-            }
-
-            formulario.addEventListener("submit",validar);
-    }())
-      
-    </script>
-
+     <!-- codigo javascript -->
+    <script src="notas.js"></script>
+    
 </body>
 </html>
