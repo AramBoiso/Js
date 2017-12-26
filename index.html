@@ -8,33 +8,40 @@
 </head>
 <body>
         <!--
-                                                             Video 14
-                                             En este video se creeo un nuevo elemento al Dom
-                                             con una serie de pasos.             
-                                             
-                                         DOM = DocumentObjectMode    
+                                                             Video 15
+
+                              En este video prendi a como insertar elementos nuevos a un elemento padre 
+                                y agregarlos antes de un elemento como despues.          
+                                            
         -->
 
-        <div id="subtitulo"></div>
+        <ol id="lista">
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+        </ol>
 
      
 
     <script>
        
-     // 1 - Crear Elemento
-     var elemento = document.createElement("h1");
+    
+     var elemento = document.createElement("li"),
+         contenido = document.createTextNode("Nuevo Texto"),
+         elemento_2 = document.createElement("li"),
+         contenido_2 = document.createTextNode("Nuevo Texto 2")
 
-     // 2 - Crear un nodo de texto
-     var contenido = document.createTextNode("TITULO");
+         elemento.appendChild(contenido);
+         elemento_2.appendChild(contenido_2);
 
-     // 3 - Añadir el nodo de texto al Elemento
-     elemento.appendChild(contenido);
+     var padre = document.getElementsByTagName("li")[0].parentNode,     // = var padre = document.getElementById("lista");
+         hijo = document.getElementsByTagName("li")[0];
+      
 
-     // 4 - Agregar atributos al elemento
-     elemento.setAttribute("aling", "center");
+        padre.appendChild(elemento_2);
+        padre.insertBefore(elemento, hijo);
 
-     // 5 - Agregar el elemento al documento
-     document.getElementById("subtitulo").appendChild(elemento);
+    
+         
       
     </script>
 
