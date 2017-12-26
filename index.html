@@ -11,9 +11,9 @@
 
 <body>
         <!--
-                                                                Video 21
-                                En este video aprendi a utilizar el atributo de name para los formularios
-                                tanto como acceder a los valores de el formulario.
+                                                                Video 22
+                                En este video aprendi a validar un formulario de una manera
+                                basica.
 
                                   
                                             
@@ -38,11 +38,46 @@
       
     (function(){
 
-        
-       console.log(document.formulario);
-       console.log(document.formulario.elements.sexo[0]);
-         
+        var formulario = document.getElementsByName("formulario")[0],
+            elementos = formulario.elements,
+            boton = document.getElementById("btn");
 
+            var validarNombre = function(e){
+                if(formulario.nombre.value == 0){
+                    alert("Completa el Campo Nombre");
+                    e.preventDefault();
+                }
+
+            },
+
+            validarRadiosButtons = function(e){
+                if(formulario.sexo[0].checked == true || formulario.sexo[0].checked == true ){
+
+                }
+                else{   
+                     alert("Selecciona tu sexo");
+                     e.preventDefault();
+                }
+
+            },
+
+            validarCheckBox = function(e){
+                if(formulario.terminos.checked == false){
+                      alert("Por favor acepta los terminos y condiciones");
+                      e.preventDefault();
+                }
+                else{
+                               
+                }
+            }
+
+            var validar = function (e){
+               validarNombre(e);
+               validarRadiosButtons(e);
+               validarCheckBox(e);
+            }
+
+            formulario.addEventListener("submit",validar);
     }())
       
     </script>
