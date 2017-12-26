@@ -6,59 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JavaScript</title>
 
-    <style>
-
-     .thumb{
-         width: 200px;
-         transition: 300ms all ease;
-     }
-
-      .grande{
-          width: 400px;
-      }
-
-      input[type="button"]{
-          display: block;
-          margin:5px;
-      }
-
-    </style>
+  
 </head>
 
 <body>
         <!--
-                                                                Video 20
-                                En este video utilize varios tipos de eventos y algunas funciones de ellos
+                                                                Video 21
+                                En este video aprendi a utilizar el atributo de name para los formularios
+                                tanto como acceder a los valores de el formulario.
 
                                   
                                             
         -->
       
-       <button id="btn">clic</button>
-       <input type="text" name="" id="campoDeTexto">
+      <form action="" name="formulario" method="get">
+        <input type="text" name="nombre" id="nom" maxlength="30" placeholder="Nombe: ">
+        <br>
 
-       <a href="https://youtube.com.mx" id="link">YOUTUBE</a>
+        <input type="radio" name="sexo" id="hombre" value="Hombre"> Hombre
+        <input type="radio" name="sexo" id="mujer" value="Mujer"> Mujer
+        <br>
+
+        <input type="checkbox" name="terminos" id="term"> Terminos y Condiciones
+         <br>
+
+        <input type="submit" value="Enviar" id="btn" name="boton">
+      </form>
      
 
     <script>
       
     (function(){
 
-            var boton = document.getElementById("btn"),
-                tipo = function(e){
-                    alert("Este evento es de tipo: "+ e.type +" target: "+ e.target);
-                }
-
-            btn.addEventListener("click",tipo);
-        //  btn.removeEventListener("click",saludo);
-
-            var link = document.getElementById("link"),
-                prevenir = function(e){
-                    console.log("Hola Mundo");
-                    e.preventDefault();
-                }
-            link.addEventListener("click",prevenir);
-
+        
+       console.log(document.formulario);
+       console.log(document.formulario.elements.sexo[0]);
          
 
     }())
