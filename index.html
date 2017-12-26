@@ -8,22 +8,29 @@
 </head>
 <body>
         <!--
-                                                     Video 9
-                                       En este video pude ver la estructura de una funcion 
-                                       y como utilizarla        
+                                                     Video 10
+                                      En este video hize un ejercicio el cuel consiste en sumar dos numeros 
+                                      utilizando el formulario y usando funciones
 
                     
         -->
 
+        <form action="">
+            <input type="text" placeholder="numero 1" id="n1">
+            <input type="text" placeholder="numero 2" id="n2">
+            <input type="submit" value="sumar" onclick="alert(suma());">
+        </form>
+
+       <div id="imprime"></div>
     <script>
 
-      var numero_maximo = function(n,n2){
-          if(n > n2){
-              return n;
-          } return n2;
-      }
+     var suma = function(){
+        var numero1 = parseFloat(document.getElementById("n1").value), 
+            numero2 = parseFloat(document.getElementById("n2").value),
+            resultado = numero1 + numero2;
 
-      console.log("El numero mayor es: "+ numero_maximo(30,10));
+          return resultado;
+     }
 
 
     </script>
