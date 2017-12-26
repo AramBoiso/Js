@@ -8,19 +8,23 @@
 
     <style>
 
-      div{
-          width: 250px;
-          height: 350px;
-          border: 1px solid black;
-          display: inline-block;
+     .thumb{
+         width: 200px;
+         transition: 300ms all ease;
+     }
+
+      .grande{
+          width: 400px;
       }
 
-      .rojo{
-          background-color: red;
+      .titulo{
+          border: 1px solid navy;
+          background-color: #ccc;
+          padding: 10px;
       }
 
-      .azul{
-          background-color: blue;
+      .tituloGrande{
+          font-size: 100px;
       }
     
     </style>
@@ -28,43 +32,27 @@
 
 <body>
         <!--
-                                                                Video 17
-                                 En este video aprendi a como agregar atributos a los elementos del DOM       
+                                                                Video 18
+                                En este video aprendi a manipular los estilos css por medio de Javascript    
 
                                   
                                             
         -->
-    <section id ="contenedor">
-        <div class=""></div>
-        <div class=""></div>
-        <div class=""></div>
-        <a href="https:google.com.mx" id="enlace">GOOGLE</a>
-    </section>
+    <h1 id="encabezado" class="titulo tituloGrande"> Soy un encabezado \* - */ </h1>
         
      
 
     <script>
 
-   var elemento = document.createElement("div"),
-       div = document.getElementsByTagName("div"),
-       padre = document.getElementById("contenedor");
+       var encabezado = document.getElementById("encabezado");
+     /*
+       encabezado.style.color = "red";
+       encabezado.style.backgroundColor = "navy";
+       encabezado.style.padding = "5px";
+       encabezado.style.textAlign = "center";
+    */
 
-
-       elemento.setAttribute("class","rojo");
-
-       padre.insertBefore(elemento, div[0]);
-
-       div[1].id = "tengo un nuevo id";
-
-       div[2].className = "azul";
-
-
-      var enlace = document.getElementById("enlace");
-
-      console.log(enlace.href);
-
-       
-
+    encabezado.className = encabezado.className.replace("tituloGrande","");
        
 
       
