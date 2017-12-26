@@ -27,38 +27,41 @@
 
 <body>
         <!--
-                                                                Video 19
-                                En este video hize una practica con una imagen, esta hace un efecto zoom
-                                cuando les das clic al boton  
+                                                                Video 20
+                                En este video utilize varios tipos de eventos y algunas funciones de ellos
 
                                   
                                             
         -->
       
-        <form action="">
-            <input type="button" value="zoom" onclick="clic()" >
-        </form>
+       <button id="btn">clic</button>
+       <input type="text" name="" id="campoDeTexto">
 
-    <img src="https://lorempixel.com/400/400" alt="" id="img" class="thumb">
-    
-        
+       <a href="https://youtube.com.mx" id="link">YOUTUBE</a>
      
 
     <script>
       
-      function clic(){
-          
-          var imagen = document.getElementById("img");
+    (function(){
 
-       if(imagen.className == "thumb" ){
-           imagen.className = "thumb grande";
-       }
-       else{
-        imagen.className = "thumb";
-       }
+            var boton = document.getElementById("btn"),
+                tipo = function(e){
+                    alert("Este evento es de tipo: "+ e.type +" target: "+ e.target);
+                }
 
+            btn.addEventListener("click",tipo);
+        //  btn.removeEventListener("click",saludo);
 
-      }
+            var link = document.getElementById("link"),
+                prevenir = function(e){
+                    console.log("Hola Mundo");
+                    e.preventDefault();
+                }
+            link.addEventListener("click",prevenir);
+
+         
+
+    }())
       
     </script>
 
