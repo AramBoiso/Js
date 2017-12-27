@@ -10,46 +10,31 @@
 <!-- 
 
 
-                                           video 23:
-                            En este video aprendi a como utilizar el tiempo o mas bien
-                            funciones que se ejecutan cada determinado tiempo o si se desea infinitamente       
+                                               video 24:
+                            En este video aprendi a como opetener datos como fechas
+                            minutos horas etc.....      
 
 
  -->
 
 
- 
+
 
  <!-- codigo javascript -->
     <script>
         (function(){
+            var fecha = new Date();
+            document.write(fecha);
 
-         /*  var contador = 1;
-          
-            var saludo = function(){
-                if(contador > 10){
-                  alert("se termino el juego :C");
-                  clearInterval(intervalo);
-                }else{
-                console.log(contador);
-                contador++;
-                }
-            } 
+            console.log(fecha.getHours() -12);
+            console.log(fecha.getMinutes());
+            console.log(fecha.getSeconds());
 
-         var intervalo = setInterval(saludo,1000);
 
-       */
-
-       /*
-         var i = 0;
-         var saludo_2 = function(){
-             console.log(i);
-             i++;
-             setTimeout(saludo_2, 1000);
-         }
-
-         saludo_2();
-        */ 
+            console.log(fecha.getDay());
+            console.log(fecha.getDate());
+            console.log(fecha.getMonth());
+            console.log(fecha.getFullYear());
         }())
     </script>
     
